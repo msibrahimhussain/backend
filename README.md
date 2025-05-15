@@ -1,52 +1,62 @@
-Swift Backend Assignment (Node.js + TypeScript + MongoDB)
-This project is a simple REST API server built with Node.js, TypeScript, and MongoDB. It allows basic CRUD operations for Users, Posts, and Comments data. The data is fetched from the JSON Placeholder API and stored in local MongoDB.
+Swift Assignment - User, Post, Comment Management API
+This project is a Node.js + TypeScript REST API that:
 
-Features
-Load 10 users, their posts, and comments from JSON Placeholder and store them in MongoDB.
+Loads data from JSON Placeholder API (users, posts, comments).
 
-CRUD operations for users.
+Stores them in MongoDB.
 
-Users' posts and comments included in user retrieval.
+Supports CRUD operations on users.
 
-Type-safe development using TypeScript.
+Supports cascade delete of related posts and comments.
 
-Follows RESTful API standards with proper error handling.
+Setup Instructions
+Clone the repository
+git clone https://github.com/Prashanthnalagonda/Swift-Assignment.git
+cd Swift-Assignment
 
-Technologies Used
-Node.js (with Express.js)
+Install dependencies
+npm install
 
-TypeScript
+**Configure MongoDB**
 
-MongoDB (native driver)
+Ensure MongoDB is running locally (mongodb://localhost:27017 by default).
 
-Axios (for fetching data)
+Or update your MongoDB connection string in src/config/db.ts.
 
-Morgan (for logging)
+**Run the project in development mode**
+npm start
 
-Nodemon (for development)
+**API will be available at**
+http://localhost:3000
 
-ESLint (optional for code quality)
-
-Useful Commands
-| Command         | Description                    |
-| --------------- | ------------------------------ |
-| `npm run dev`   | Run the server with Nodemon    |
-| `npm run build` | Build the project (TypeScript) |
-| `npm start`     | Start the built project        |
-
-
-API Endpoints
+**API Endpoints**
 | Method | Endpoint         | Description                                 |
 | ------ | ---------------- | ------------------------------------------- |
-| GET    | `/load`          | Loads users, posts, and comments into DB    |
-| DELETE | `/users`         | Deletes all users                           |
-| DELETE | `/users/:userId` | Deletes a specific user by ID               |
-| GET    | `/users/:userId` | Gets a user along with their posts/comments |
-| PUT    | `/users`         | Adds a new user                             |
+| GET    | `/load`          | Loads 10 users, posts, and comments into DB |
+| PUT    | `/users`         | Add a new user (checks for duplicate `id`)  |
+| GET    | `/users`         | Get all users                               |
+| GET    | `/users/:userId` | Get a specific user with posts and comments |
+| DELETE | `/users/:userId` | Delete a user by `userId` (cascade delete)  |
+| DELETE | `/users`         | Delete all users                            |
+
+**Postman Collection**
+https://web.postman.co/workspace/118013cf-797f-45b2-82bd-b7cc5d403aa2/documentation/44952353-25111fbb-627f-4cc9-901f-28158264012a
+
+You can easily test all APIs using the shared Postman collection:
+
+**Swift Assignment API Collection (Postman)**
+https://web.postman.co/workspace/118013cf-797f-45b2-82bd-b7cc5d403aa2/documentation/44952353-25111fbb-627f-4cc9-901f-28158264012a
+
+Open the link.
+
+Click Fork/Run in Postman.
+
+http://localhost:3000.
+
+Start testing the API!
 
 
-*Best Practices Followed
-TypeScript strict mode enabled.
+Best Practices Followed TypeScript strict mode enabled.
 
 Centralized error handling.
 
@@ -56,5 +66,6 @@ Request validation before DB operations.
 
 Clean folder structure for scalability.
 
-Author
+**Author**
 Prashanth Nalagonda
+https://github.com/Prashanthnalagonda/Swift-Assignment.git
