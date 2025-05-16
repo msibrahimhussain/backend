@@ -39,13 +39,6 @@ http://localhost:3000
 | DELETE | `/users/:userId` | Delete a user by `userId` (cascade delete)  |
 | DELETE | `/users`         | Delete all users                            |
 
-**Postman Collection**
-https://web.postman.co/workspace/118013cf-797f-45b2-82bd-b7cc5d403aa2/documentation/44952353-25111fbb-627f-4cc9-901f-28158264012a
-
-You can easily test all APIs using the shared Postman collection:
-
-**Swift Assignment API Collection (Postman)**
-https://web.postman.co/workspace/118013cf-797f-45b2-82bd-b7cc5d403aa2/documentation/44952353-25111fbb-627f-4cc9-901f-28158264012a
 
 Open the link.
 
@@ -66,6 +59,3 @@ Request validation before DB operations.
 
 Clean folder structure for scalability.
 
-**Author**
-Prashanth Nalagonda
-https://github.com/Prashanthnalagonda/Swift-Assignment.git
